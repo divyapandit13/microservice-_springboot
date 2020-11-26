@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\Admin\Desktop\Git\microservice-_springboot\Store\.metadata\.plugins\org.eclipse.jdt.core
+842721601.index
+1542923311.index
