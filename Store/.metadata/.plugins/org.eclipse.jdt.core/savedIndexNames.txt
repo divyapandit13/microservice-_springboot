@@ -55,7 +55,6 @@ INDEX VERSION 1.131+C:\Users\Admin\Desktop\Git\microservice-_springboot\Store\.m
 772930786.index
 3087567982.index
 3179782696.index
-842721601.index
 397463892.index
 541038578.index
 3740307994.index

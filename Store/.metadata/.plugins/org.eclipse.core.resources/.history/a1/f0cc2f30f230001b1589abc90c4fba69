@@ -33,22 +33,17 @@ public class Store {
 
 		case "apple":
 			
-		modelandview = new ModelAndView("apple");
+		modelandview = new ModelAndView("${brandname}");
 		restTemplate = new RestTemplate();
-		result = restTemplate.getForObject("http://localhost:8083/apple/devices", AllDevices.class);
+		result = restTemplate.getForObject("http://localhost:8082/${brandname}/devices", AllDevices.class);
 		modelandview.addObject("devices",result);
 		return modelandview;
 
 		default:
 			return new ModelAndView("redirect: /error");
 		}
+		return null;
 
-	}
-	
-	@RequestMapping("/error")
-	public ModelAndView error() {
-		ModelAndView modelandview = new ModelAndView("error");
-		return modelandview;
 	}
 
 }
