@@ -21,7 +21,7 @@ public class Store {
 		RestTemplate restTemplate;
 		AllDevices result;
 		
-		switch (brandname.toLowerCase()) {
+		switch (brandname) {
 		case "samsung": 
 		
 		modelandview = new ModelAndView("samsung");
@@ -45,5 +45,10 @@ public class Store {
 
 	}
 	
+	@RequestMapping("/error")
+	public ModelAndView error() {
+		ModelAndView modelandview = new ModelAndView("error");
+		return modelandview;
+	}
 
 }

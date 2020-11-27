@@ -1,0 +1,11 @@
+package org.microservice.store;
+
+public class ErrorController implements org.springframework.boot.web.servlet.error.ErrorController {
+
+	@Override
+	public String getErrorPath() {
+		// TODO Auto-generated method stub
+		return "/error";
+	}
+
+}
