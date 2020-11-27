@@ -21,14 +21,14 @@ public class Store {
 		case "samsung":
 			modelAndView = new ModelAndView("samsung");
 			restTemplate = new RestTemplate();
-			result = restTemplate.getForObject("http://localhost:8082/samsung/device", AllDevices.class);
+			result = restTemplate.getForObject("http://localhost:8082/samsung/devices", AllDevices.class);
 		    modelAndView.addObject("devices", result);
 			return modelAndView;
 			
        case "apple":
     	    modelAndView = new ModelAndView("apple");
 		    restTemplate = new RestTemplate();
-			result = restTemplate.getForObject("http://localhost:8083/apple/device", AllDevices.class);
+			result = restTemplate.getForObject("http://localhost:8083/apple/devices", AllDevices.class);
 		    modelAndView.addObject("devices", result);
 			return modelAndView;
 

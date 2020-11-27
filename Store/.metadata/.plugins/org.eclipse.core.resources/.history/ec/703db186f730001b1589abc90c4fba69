@@ -1,8 +1,11 @@
 package org.microservice.store;
+import javax.websocket.server.PathParam;
+
 import org.microservice.model.AllDevices;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -21,14 +24,14 @@ public class Store {
 		case "samsung":
 			modelAndView = new ModelAndView("samsung");
 			restTemplate = new RestTemplate();
-			result = restTemplate.getForObject("http://localhost:8082/samsung/device", AllDevices.class);
+			result = restTemplate.getForObject("http://localhost:8082/samsung/devices", AllDevices.class);
 		    modelAndView.addObject("devices", result);
 			return modelAndView;
 			
        case "apple":
     	    modelAndView = new ModelAndView("apple");
 		    restTemplate = new RestTemplate();
-			result = restTemplate.getForObject("http://localhost:8083/apple/device", AllDevices.class);
+			result = restTemplate.getForObject("http://localhost:8083/apple/devices", AllDevices.class);
 		    modelAndView.addObject("devices", result);
 			return modelAndView;
 
