@@ -1,11 +1,11 @@
-package org.microservice.apple.devices;
+package org.microservice.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AllDevices {
     List<Device> allDevices = new ArrayList<Device>();
-    String brandName = "Apple";
+    String brandName = "Samsung";
     public AllDevices() {
     }
 

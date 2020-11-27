@@ -19,7 +19,7 @@ public ModelAndView samsung() {
 	ModelAndView modelandview = new ModelAndView("samsung");
 	//connect with microservice
 	RestTemplate restTemplate = new RestTemplate();
-	AllDevices result = restTemplate.getForObject("http://localhost:8082/samsung/devices", AllDevices.class);
+	String result = restTemplate.getForObject("http://localhost:8082/samsung/devices", String.class);
 	modelandview.addObject("devices",result);
 	
 	
