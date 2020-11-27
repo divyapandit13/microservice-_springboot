@@ -25,4 +25,19 @@ public ModelAndView samsung() {
 	return modelandview;
 }
 
+
+
+@RequestMapping("/apple")
+public ModelAndView apple() {
+	
+	ModelAndView modelandview = new ModelAndView("samsung");
+	//connect with microservice
+	RestTemplate restTemplate = new RestTemplate();
+	String result = restTemplate.getForObject("http://localhost:8083/apple/devices", String.class);
+	modelandview.addObject("devices",result);
+	
+	
+	return modelandview;
+}
+
 }
