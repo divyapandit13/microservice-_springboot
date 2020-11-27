@@ -18,7 +18,7 @@ public class Samsung {
         device.add(new Device("Note9","Smartphone"));
         device.add(new Device("A50s","Smartphone"));
 
-        AllDevices allDevicesList = new AllDevices(device,"Samsung");
+        AllDevices allDevicesList = new AllDevices(device,"samsung");
         return allDevicesList;
     }
 }

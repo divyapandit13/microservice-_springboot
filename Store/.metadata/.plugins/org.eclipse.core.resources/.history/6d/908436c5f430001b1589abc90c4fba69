@@ -1,11 +1,10 @@
 package org.microservice.store;
+
 import javax.websocket.server.PathParam;
 
 import org.microservice.model.AllDevices;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,7 +16,7 @@ public class Store {
 		return "home";
 	}
 	@RequestMapping("/{brandname}")
-	public ModelAndView samsung(@PathVariable("brandname") String brandname) {
+	public ModelAndView samsung(@PathParam("brandname") String brandname) {
 		ModelAndView modelandview;
 		RestTemplate restTemplate;
 		AllDevices result;

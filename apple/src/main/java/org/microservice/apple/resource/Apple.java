@@ -17,7 +17,7 @@ public class Apple {
         List<Device> device = new ArrayList<Device>();
         device.add(new Device("12pro","Smartphone"));
         device.add(new Device("Iphone11","Smartphone"));
-        AllDevices allDeviceList = new AllDevices(device,"Apple");
+        AllDevices allDeviceList = new AllDevices(device,"apple");
         return allDeviceList;
     }
 }
